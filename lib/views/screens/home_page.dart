@@ -1,12 +1,10 @@
 import 'dart:async';
 import 'dart:math';
-
 import 'package:animator_app/helper/json_helper.dart';
 import 'package:animator_app/modals/planetmodal.dart';
 import 'package:animator_app/utils/MyRoutes.dart';
 import 'package:circle_list/circle_list.dart';
 import 'package:flutter/material.dart';
-
 import '../../components/planet_item.dart';
 import '../../utils/colors.dart';
 
@@ -118,6 +116,7 @@ class _HomePageState extends State<HomePage> {
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               List<PlanetModal> pm = snapshot.data!;
+
               return SizedBox(
                 width: w,
                 height: h,
@@ -133,8 +132,9 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           IconButton(
                             onPressed: () {
-                              Navigator.of(context)
-                                  .pushNamed(MyRoutes.planethomepage);
+                              Navigator.of(context).pushNamed(
+                                MyRoutes.planethomepage,
+                              );
                             },
                             icon: Icon(
                               Icons.preview,
@@ -143,8 +143,9 @@ class _HomePageState extends State<HomePage> {
                           ),
                           IconButton(
                             onPressed: () {
-                              Navigator.of(context)
-                                  .pushNamed(MyRoutes.planethomepage);
+                              Navigator.of(context).pushNamed(
+                                MyRoutes.favourite_page,
+                              );
                             },
                             icon: Icon(
                               Icons.favorite_border,

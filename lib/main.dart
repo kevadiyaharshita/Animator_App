@@ -1,8 +1,10 @@
 import 'package:animator_app/controllers/favourite_controller.dart';
 import 'package:animator_app/utils/MyRoutes.dart';
 import 'package:animator_app/views/screens/detail_page.dart';
+import 'package:animator_app/views/screens/favourite_page.dart';
 import 'package:animator_app/views/screens/planet_home_page.dart';
 import 'package:animator_app/views/screens/ripple_animation_page.dart';
+import 'package:animator_app/views/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -30,12 +32,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      initialRoute: MyRoutes.home,
+      initialRoute: MyRoutes.splash_screen,
       routes: {
         MyRoutes.home: (context) => HomePage(),
         MyRoutes.RippleAnimationpage: (context) => RippleAnimationPage(),
         MyRoutes.planethomepage: (context) => PlanetHomePage(),
         MyRoutes.detail_page: (context) => DetailPage(),
+        MyRoutes.favourite_page: (context) => FavouritePage(),
+        MyRoutes.splash_screen: (context) => SplashScreen(),
       },
     );
   }

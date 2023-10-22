@@ -9,24 +9,29 @@ Widget detail_Data({required PlanetModal pm}) {
       child: Column(
         children: [
           //distance
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'DISTANCE FROM EARTH : \t',
-                style: TextStyle(
-                    fontSize: 18,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold),
-              ),
-              Text(
-                '${pm.distancefromEarth} KM',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.white.withOpacity(0.8),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'DISTANCE FROM EARTH : \t',
+                  style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold),
                 ),
-              ),
-            ],
+                Text(
+                  '${pm.distancefromEarth} KM',
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    overflow: TextOverflow.ellipsis,
+                    fontSize: 16,
+                    color: Colors.white.withOpacity(0.8),
+                  ),
+                ),
+              ],
+            ),
           ),
 
           //velocity
@@ -139,26 +144,29 @@ Widget detail_Data({required PlanetModal pm}) {
             ],
           ),
 
-          //orbitalspeed
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'SURFACEAREA \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t:  ',
-                style: TextStyle(
-                    fontSize: 18,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold),
-              ),
-              Text(
-                '${pm.surfaceArea} ',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.white.withOpacity(0.8),
+          //surface area
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'SURFACEAREA \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t:  ',
+                  style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold),
                 ),
-              ),
-              Spacer(),
-            ],
+                Text(
+                  '${pm.surfaceArea}'.padLeft(11, '0'),
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.white.withOpacity(0.8),
+                  ),
+                ),
+              ],
+            ),
           ),
 
           //orbitalspeed

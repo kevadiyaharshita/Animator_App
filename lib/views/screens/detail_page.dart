@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:animator_app/components/distancefromearth_data.dart';
+import 'package:animator_app/components/details_data_of_planet.dart';
 import 'package:animator_app/controllers/favourite_controller.dart';
 import 'package:animator_app/modals/planetmodal.dart';
 import 'package:blurrycontainer/blurrycontainer.dart';
